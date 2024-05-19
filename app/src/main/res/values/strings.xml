@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BTL</string>
+    <string-array name="Category">
+        <item>BTL</item>
+        <item>BT</item>
+        <item>TH</item>
+        <item>KT</item>
+    </string-array>
+</resources>

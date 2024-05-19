@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mHome"
+        android:title="Hom Nay"
+        android:icon="@drawable/ic_home"/>
+    <item android:id="@+id/mList"
+        android:title="Danh Sach"
+        android:icon="@drawable/ic_list"/>
+    <item android:id="@+id/mSearch"
+        android:title="Tim Kiem"
+        android:icon="@drawable/search_icon"/>
+</menu>

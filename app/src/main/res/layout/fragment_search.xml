@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/yellow"
+                android:text="Tìm Kiếm"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_search"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/tv_search"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="-50dp">
+
+                <SearchView
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/curved_rectangle"
+                    android:backgroundTint="#DAD9D9"
+                    android:iconifiedByDefault="false"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:queryHint="Search by name"
+                    android:textColor="#696969"
+                    android:textColorHint="#696969"/>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Chon ngay"
+                android:textSize="15dp"
+                android:layout_below="@id/rl_search"/>
+
+            <EditText
+                android:id="@+id/edTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Den ngay"
+                android:textSize="15dp"
+                android:layout_below="@id/edFrom"/>
+
+            <LinearLayout
+                android:id="@+id/lnSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edTo"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Spinner
+                    android:id="@+id/spDes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_below="@id/edTo"
+                    android:layout_margin="10dp"
+                    android:gravity="center"/>
+
+                <Button
+                    android:id="@+id/btSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    android:background="@color/black"
+                    android:text="Search"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/headings"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/lnSearch"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#938383"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:text="Tên"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:text="Mô tả"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.25"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:text="Giờ"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.25"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:text="Ngày"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:layout_below="@+id/headings"
+                android:layout_centerHorizontal="true"
+                android:background="#000"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="580dp"
+                android:layout_below="@+id/line2"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
